@@ -131,6 +131,7 @@
 .histogram
 {
     display: flex;
+    flex-direction: column;
     flex: 2;
     text-align: center;
     height: 500px;
