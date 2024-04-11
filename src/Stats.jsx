@@ -113,7 +113,7 @@ function Stats({selectedOption}) {
             >
             <Typography variant='h4' style={{color:'#663a8a'}}>
                 <br/>
-            Most Common Degree type:
+            Most Common Seniority Level:
             </Typography>
         </Grow>)}
     
@@ -139,7 +139,7 @@ function Stats({selectedOption}) {
             style={{ transformOrigin: '0 0 0' , color: '#0077B5', marginTop: '20px'}}
             {...(selectedOption ? { timeout: 8000 } : {})}
         >
-            <Paper elevation={3} style={{height:'350px',width:'50%'}}>
+            <Paper elevation={3} style={{height:'350px',width:'100%'}}>
                 <Histogram countedData={jobs[key].HistDict_recommendations_count} 
                 x = {'Number of Recommendations'} y={'Frequancy'} title={'Recommendations Histogram'}/>
             </Paper>
@@ -151,7 +151,7 @@ function Stats({selectedOption}) {
             style={{ transformOrigin: '0 0 0' , color: '#0077B5', marginTop: '20px'}}
             {...(selectedOption ? { timeout: 8000 } : {})}
         >
-            <Paper elevation={3} style={{height:'350px',width:'50%', marginLeft:'5px',marginRight:'5PX' }}>
+            <Paper elevation={3} style={{height:'350px',width:'100%', marginLeft:'5px',marginRight:'5PX' }}>
                 <Histogram countedData={jobs[key].HistDict_experience_years}
                 x={'Years'} y={'Frequency'} title={'Experience Histogram'} />
             </Paper>
