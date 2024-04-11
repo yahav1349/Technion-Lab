@@ -12,9 +12,9 @@ def create_mapping_df(df):
     return median_and_id_sorted
 
 def df_with_description(df):
-    df = df[['job id', 'full description']]
+    df = df[['job id', 'llm_job_desc']]
     df = df.rename(columns={'job id': 'job_id'})
-    df = df.rename(columns={'full description': 'description'})
+    df = df.rename(columns={'llm_job_desc': 'description'})
     return df
 
 def join_df(df1, df2):
@@ -25,8 +25,6 @@ def join_df(df1, df2):
     df = df.drop(columns=['job_id', 'job id'])
     df = df[~df['cluster'].isin(unwanted_list)].reset_index(drop=True)
     
-
-
     # Create a dictionary where 'job title' is the key and other columns are the values
     dict_from_df = df.set_index('job title').apply(dict, axis=1).to_dict()
 
